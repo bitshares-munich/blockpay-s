@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:weightSum="1"
+    android:elevation="5dp"
+              android:background="@android:color/darker_gray">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/toolbar_title" />
+        </android.support.v7.widget.Toolbar>
+
+    <WebView
+        android:id="@+id/wbLA"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:elevation="0dp">
+    </WebView>
+
+    <LinearLayout
+        android:paddingTop="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:weightSum="1"
+        android:layout_gravity="bottom"
+        android:background="@android:color/white"
+        android:clipToPadding="false"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnDisAgree"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.50"
+            android:stateListAnimator="@animator/my_animated_button"
+            android:background="@color/pink"
+            android:textColor="@color/white"
+            android:textSize="13dp"
+            android:text="Disagree"/>
+    <Button
+        android:id="@+id/btnAgree"
+        android:layout_weight="0.50"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:stateListAnimator="@animator/my_animated_button"
+        android:background="#27ae5f"
+        android:text="Agree"
+        android:textSize="13dp"
+        android:textColor="@color/white"
+        />
+    </LinearLayout>
+</LinearLayout>

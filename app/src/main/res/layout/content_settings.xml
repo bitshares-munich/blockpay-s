@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="20dp">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/ivGravatar"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/ivChangeGravatar"
+        android:src="@drawable/icon_change_gravatar"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_change"
+        android:layout_marginRight="5dp"
+        android:gravity="center"
+        android:layout_above="@+id/ivDeleteGravatar"
+        android:layout_toLeftOf="@+id/tvChangeGravatar"
+        android:layout_alignTop="@+id/ivChangeGravatar"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gravatar"
+        android:id="@+id/tvChangeGravatar"
+        android:layout_marginRight="5dp"
+        android:gravity="center"
+        android:layout_above="@+id/ivDeleteGravatar"
+        android:layout_toLeftOf="@+id/ivChangeGravatar"
+        android:layout_toStartOf="@+id/ivChangeGravatar"
+        android:layout_alignTop="@+id/ivChangeGravatar"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_delete"
+        android:gravity="center"
+        android:layout_marginRight="5dp"
+        android:layout_alignBottom="@+id/ivDeleteGravatar"
+        android:layout_toLeftOf="@+id/tvDeleteGravatar"
+        android:layout_alignTop="@+id/ivDeleteGravatar"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gravatar"
+        android:id="@+id/tvDeleteGravatar"
+        android:gravity="center"
+        android:layout_alignBottom="@+id/ivDeleteGravatar"
+        android:layout_alignRight="@+id/tvChangeGravatar"
+        android:layout_alignEnd="@+id/tvChangeGravatar"
+        android:layout_alignTop="@+id/ivDeleteGravatar"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="3dp"
+        android:id="@+id/ivDeleteGravatar"
+        android:src="@drawable/icon_delete_gravatar"
+        android:layout_below="@+id/ivChangeGravatar"
+        android:layout_alignLeft="@+id/ivChangeGravatar"
+        android:layout_alignStart="@+id/ivChangeGravatar"/>
+
+</RelativeLayout>
+
+    <!--<EditText-->
+        <!--android:id="@+id/etCompanyName"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:maxLength="30"-->
+        <!--android:maxLines="1"-->
+        <!--android:hint="@string/txt_company_name"-->
+        <!--android:singleLine="true"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <EditText
+            android:id="@+id/etBitShareAccountName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:hint="@string/txt_account_name"
+            android:layout_weight="0.99"
+            android:textAllCaps="false"
+            android:singleLine="true"
+            />
+
+        <WebView
+            android:id="@+id/wbBitShareAccountName"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/light_sky_blue" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/button_rows"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:padding="5dp">
+        <LinearLayout
+            android:id="@+id/button_first_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/register_new_account"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/button_border"
+                android:stateListAnimator="@animator/my_animated_button"
+                android:text="@string/register_new_account"
+                android:textColor="@drawable/btn_txt"
+                android:textStyle="normal"
+            />
+
+            <Button
+                android:id="@+id/import_new_account"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:background="@drawable/button_border"
+                android:stateListAnimator="@animator/my_animated_button"
+                android:text="@string/import_new_account"
+                android:textColor="@drawable/btn_txt"
+                android:textStyle="normal"
+            />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/button_second_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_first_row"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/upgrade_account"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/button_border"
+                android:stateListAnimator="@animator/my_animated_button"
+                android:text="@string/upgrade_account"
+                android:textColor="@drawable/btn_txt"
+                android:textStyle="normal"
+            />
+
+            <Button
+                android:id="@+id/remove_account"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:background="@drawable/button_border"
+                android:stateListAnimator="@animator/my_animated_button"
+                android:text="@string/remove_account"
+                android:textColor="@drawable/btn_txt"
+                android:textStyle="normal"
+            />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/light_sky_blue" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/icon_account"/>
+        <me.grantland.widget.AutofitLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textColor="#1fa9e5"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="@string/txt_desired_smartcoin"/>
+        </me.grantland.widget.AutofitLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llDesiredSmartcoinRadioButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+        <LinearLayout android:orientation="horizontal" android:layout_height="fill_parent" android:layout_width="fill_parent">
+            <LinearLayout android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent">
+                <RadioGroup
+                    android:id="@+id/smartCoinsRadioGroupOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"/>
+            </LinearLayout>
+            <LinearLayout android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent">
+                <RadioGroup
+                    android:id="@+id/smartCoinsRadioGroupTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"/>
+            </LinearLayout>
+        </LinearLayout>
+        <RadioGroup
+            android:id="@+id/smartCoinsRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            </RadioGroup>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/light_sky_blue" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/icon_account"/>
+        <me.grantland.widget.AutofitLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="#1fa9e5"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="@string/txt_customer_loyalty"/>
+        </me.grantland.widget.AutofitLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llCustomerLoyalityRewardCredit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+        <!--<RadioGroup-->
+            <!--android:id="@+id/uiaRadioGroup"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:orientation="vertical"-->
+            <!--android:visibility="gone"/>-->
+
+
+        <LinearLayout android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:background="@color/colorPrimary"
+            android:weightSum="3">
+            <LinearLayout android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:background="@color/black">
+                <RadioGroup
+                    android:id="@+id/uiaRadioGroupOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/colorAccent">
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content">
+                <RadioGroup
+                    android:id="@+id/uiaRadioGroupTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"/>
+            </LinearLayout>
+            <LinearLayout android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content">
+                <RadioGroup
+                    android:id="@+id/uiaRadioGroupThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/light_sky_blue" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="@string/send"/>
+        <EditText
+            android:id="@+id/etRewardToGive"
+            android:layout_width="40dp"
+            android:inputType="numberDecimal"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tvRewardFor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="BTS"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginLeft="2dp"
+            android:text="@string/txt_for_every"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:id="@+id/tvCurrencyRewardLeft"
+            android:layout_marginLeft="2dp"
+            android:text="$"/>
+
+        <EditText
+            android:id="@+id/etRewardForSpending"
+            android:layout_width="40dp"
+            android:inputType="numberDecimal"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:id="@+id/tvCurrencyRewardRight"
+            android:layout_marginLeft="2dp"
+            android:visibility="gone"
+            android:text="$ "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="@string/txt_spent"/>
+        </LinearLayout>
+
+    <EditText
+        android:id="@+id/etPrivateKey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="100"
+        android:maxLines="2"
+        android:visibility="gone"
+        android:hint="@string/private_key"
+        android:singleLine="true"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/light_sky_blue" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <me.grantland.widget.AutofitLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="#1fa9e5"
+            android:textSize="30dp"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="@string/txt_bitcoin_altcoin_deposited"/>
+        </me.grantland.widget.AutofitLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llBitCoinAndAltCoins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+     <!--   <RadioGroup
+            android:id="@+id/altcoinsRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />-->
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/light_sky_blue" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/txt_taxable_country"/>
+    <Spinner
+        android:id="@+id/spCountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </Spinner>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/light_sky_blue" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/txt_preferred_language"/>
+    <Spinner
+        android:id="@+id/spLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </Spinner>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/light_sky_blue" />
+
+    <me.grantland.widget.AutofitLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="#27ae5f"
+        android:textColor="@color/white"
+        android:text="@string/txt_save"/>
+    </me.grantland.widget.AutofitLayout>
+</LinearLayout>
+</ScrollView>

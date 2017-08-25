@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- This is the extra amount to be requested to the bridge in base units (So 100 is actually 0.01 bitUSD)-->
+    <integer name="extra_usd_amount">100</integer>
+</resources>

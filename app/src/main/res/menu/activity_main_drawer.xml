@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/settings_icon"
+            android:title="@string/txt_home" />
+        <item
+            android:id="@+id/transactions"
+            android:enabled="true"
+            android:icon="@drawable/settings_icon"
+            android:title="@string/txt_transactions" />
+        <item
+            android:id="@+id/refunds"
+            android:icon="@drawable/settings_icon"
+            android:enabled="false"
+            android:title="@string/txt_Refunds_Returns" />
+        <item
+            android:id="@+id/exchanges"
+            android:icon="@drawable/settings_icon"
+            android:enabled="false"
+            android:title="@string/txt_Exchanges" />
+        <item
+            android:id="@+id/nav_camara"
+            android:icon="@drawable/settings_icon"
+            android:title="@string/txt_settings" />
+    </group>
+</menu>
+
+
+
+

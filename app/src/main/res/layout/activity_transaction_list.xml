@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:table="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="de.bitsharesmunich.blockpos.TransactionListActivity">
+
+    <LinearLayout
+        android:id="@+id/transactionsExportHeader"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/transactionsHeader"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tableView"
+        app:layout_constraintVertical_weight="0.1"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintHorizontal_bias="0.0">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:text="@string/transactions"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/btnExport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:stateListAnimator="@animator/my_animated_button"
+            android:text="@string/export"
+            android:textColor="@color/whiteColor" />
+    </LinearLayout>
+    <de.codecrafters.tableview.SortableTableView
+        android:id="@+id/tableView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/red"
+        android:backgroundTint="@color/whiteColor"
+        android:nestedScrollingEnabled="true"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transactionsExportHeader"
+        app:layout_constraintVertical_weight="0.9"
+        table:tableView_columnCount="4"
+        table:tableView_headerColor="@color/transactionsHeader"
+        table:tableView_headerElevation="10"
+        table:theme="@style/AppTheme" />
+</android.support.constraint.ConstraintLayout>
